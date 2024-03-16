@@ -15,7 +15,7 @@ class ModBuss
     public static $quantity = 6;
     public static $unitID = 1;
     public static $port = 502;
-    public static $host = "127.0.0.1"; //192.168.0.251
+    public static $host = "192.168.0.201"; //192.168.0.251
 
     public static function connect(){
         self::$connection = BinaryStreamConnection::getBuilder()

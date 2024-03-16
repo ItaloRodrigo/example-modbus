@@ -10,7 +10,7 @@ class ExampleModBus extends Controller
 {
     public function __construct()
     {
-        BusinessExampleModBus::connect();
+        // BusinessExampleModBus::connect();
     }
 
     public function index(){
