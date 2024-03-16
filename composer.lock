@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "c292623c5e754ee154a5afa8c6d28e05",
     "packages": [
+        {
+            "name": "aldas/modbus-tcp-client",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aldas/modbus-tcp-client.git",
+                "reference": "b18323bf5bb2abb531d97d6f385bafb3a6c0c658"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aldas/modbus-tcp-client/zipball/b18323bf5bb2abb531d97d6f385bafb3a6c0c658",
+                "reference": "b18323bf5bb2abb531d97d6f385bafb3a6c0c658",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.10.50",
+                "phpunit/phpunit": "^9.6.15",
+                "psr/log": "^1.1.4",
+                "react/child-process": "^0.6.5",
+                "react/datagram": "^1.9",
+                "react/socket": "^1.15"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware with BinaryStreamConnection"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ModbusTcpClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Modbus TCP protocol client library",
+            "keywords": [
+                "modbus"
+            ],
+            "support": {
+                "issues": "https://github.com/aldas/modbus-tcp-client/issues",
+                "source": "https://github.com/aldas/modbus-tcp-client/tree/3.5.1"
+            },
+            "time": "2024-03-10T12:44:20+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExampleModBus;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/', [ExampleModBus::class, 'index']);
