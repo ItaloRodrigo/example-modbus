@@ -14,8 +14,6 @@ class ExampleModBus extends Controller
     }
 
     public function index(){
-        $receive = BusinessExampleModBus::ReadInputRegisters();
-
-        return ([$receive]);
+        BusinessExampleModBus::ReadInputRegisters();
     }
 }
