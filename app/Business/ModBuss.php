@@ -25,25 +25,25 @@ class ModBuss
         //---
     }
 
-    public static function testConnection(){
-        try {
-            self::$connection = BinaryStreamConnection::getBuilder()
-                ->setHost('192.168.254.15')
-                ->setPort(502)
-                ->build();
+    // public static function testConnection(){
+    //     try {
+    //         self::$connection = BinaryStreamConnection::getBuilder()
+    //             ->setHost('192.168.254.15')
+    //             ->setPort(502)
+    //             ->build();
 
-            self::$connection->connect();
+    //         self::$connection->connect();
 
-            $message = 'Modbus TCP ';
+    //         $message = 'Modbus TCP ';
 
-            // 关闭连接
-            self::$connection->close();
+    //         // 关闭连接
+    //         self::$connection->close();
 
-            return $message;
-        } catch (\Exception $e) {
-            return 'Modbus TCP 连接失败：' . $e->getMessage();
-        }
-    }
+    //         return $message;
+    //     } catch (\Exception $e) {
+    //         return 'Modbus TCP 连接失败：' . $e->getMessage();
+    //     }
+    // }
 
     public static function ReadInputRegisters(){
         self::$connection = BinaryStreamConnection::getBuilder()
@@ -63,7 +63,7 @@ class ModBuss
              */
             $response = ResponseFactory::parseResponseOrThrow($binaryData);
             echo 'Pacote analisado (em hexadecimal):     ' . $response->toHex() . PHP_EOL."<br>";
-            echo 'Dados analisados ​​do pacote (bytes):' . PHP_EOL."<br>";
+            echo 'Dados analisados do pacote (bytes):' . PHP_EOL."<br>";
             print_r($response->getData());
 
             foreach ($response as $word) {
